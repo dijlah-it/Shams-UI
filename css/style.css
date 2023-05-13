@@ -1,0 +1,36 @@
+:root {
+  --color-primary: #a5525f;
+  --color-secondary: #d4af37;
+  --color-accent: #2b2b2b;
+  --color-heading: #0f0f0f;
+  --color-body: #232323;
+  --color-meta: #757575;
+  --color-bg: #f5f5f5;
+  --color-primary-hover: #9d5563;
+  --color-secondary-hover: #a98a27;
+  --border-radius: 1rem;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+img,
+video {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
