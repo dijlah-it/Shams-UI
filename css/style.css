@@ -1,14 +1,10 @@
 :root {
-  --color-primary: #a5525f;
-  --color-secondary: #d4af37;
-  --color-accent: #2b2b2b;
-  --color-heading: #0f0f0f;
-  --color-body: #232323;
-  --color-meta: #757575;
-  --color-bg: #f5f5f5;
-  --color-primary-hover: #9d5563;
-  --color-secondary-hover: #a98a27;
-  --border-radius: 1rem;
+  --color-background: #fef3df;
+  --color-dark-background: #311e01;
+  --color-btn-background: #cfb37d;
+  --color-sec-background: #cfb37d36;
+  --max-width: 140rem;
+  --def-width: 95%;
 }
 *,
 *::after,
@@ -25,6 +21,13 @@ body {
   font-family: "Cairo", sans-serif;
   font-size: 1.6rem;
   line-height: 1.6;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--color-background);
+  display: grid;
+  grid-template-rows:
+    1fr
+    auto;
 }
 img,
 video {
@@ -33,4 +36,31 @@ video {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* * header */
+#header {
+  position: fixed;
+  width: 100vw;
+  width: 100dvw;
+  display: flex;
+  justify-content: center;
+  padding-block: 1rem;
+  background-color: white;
+}
+
+.header-container {
+  width: var(--def-width);
+  max-width: var(--max-width);
+  display: flex;
+  justify-content: center;
+}
+
+#site-logo {
+  display: flex;
+  width: 5rem;
+}
+
+#site-logo > img {
+  width: 100%;
 }
