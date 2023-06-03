@@ -321,8 +321,16 @@ a {
   position: relative;
   background-color: white;
   overflow: hidden;
-  border: 0.1rem solid var(--color-border);
+  border: 0.2rem solid var(--color-border);
   border-radius: 1rem;
+}
+
+.hero-thumb-slider .swiper-slide {
+  width: 25rem;
+}
+
+.swiper-slide-thumb-active .hero-thumb-card {
+  border-color: white;
 }
 
 .hero-thumb-card__img {
@@ -346,4 +354,14 @@ a {
   color: white;
   padding: 1.5rem;
   align-items: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-thumb-card__img {
+    aspect-ratio: 25/15;
+  }
+
+  .hero-thumb-card__content {
+    padding: 1rem;
+  }
 }

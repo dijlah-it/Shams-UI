@@ -1,13 +1,9 @@
-const heroSlider = new Swiper(".hero-slider", {
-  slidesPerView: 1,
-  rewind: true,
-});
-
 const heroThumbSlider = new Swiper(".hero-thumb-slider", {
   slidesPerView: 2,
   spaceBetween: 10,
-  rewind: true,
-
+  loop: true,
+  loopedSlides: 7,
+  watchSlidesProgress: true,
   breakpoints: {
     768: {
       slidesPerView: 5,
@@ -15,5 +11,10 @@ const heroThumbSlider = new Swiper(".hero-thumb-slider", {
   },
 });
 
-heroSlider.controller.control = heroThumbSlider;
-heroThumbSlider.controller.control = heroSlider;
+const heroSlider = new Swiper(".hero-slider", {
+  slidesPerView: 1,
+  loop: true,
+  thumbs: {
+    swiper: heroThumbSlider,
+  },
+});
