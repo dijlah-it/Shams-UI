@@ -1,3 +1,19 @@
+// * header
+const header = document.getElementById("header");
+const checkScroll = () => {
+  if (window.scrollY !== 0) {
+    header.classList.add("scrolling");
+  } else {
+    header.classList.remove("scrolling");
+  }
+};
+checkScroll();
+
+window.addEventListener("scroll", () => {
+  checkScroll();
+});
+
+// * hero sliders
 const heroThumbSlider = new Swiper(".hero-thumb-slider", {
   slidesPerView: 2,
   spaceBetween: 10,
