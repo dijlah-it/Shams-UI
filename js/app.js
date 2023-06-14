@@ -54,4 +54,7 @@ const blogSlider = new Swiper(".blog-slider", {
       spaceBetween: 10,
     },
   },
+  pagination: {
+    el: ".blog-slider__pagination",
+  },
 });

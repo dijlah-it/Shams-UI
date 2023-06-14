@@ -544,12 +544,12 @@ a {
   align-self: center;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .blog-slider {
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .blog-slider .swiper-slide {
@@ -564,4 +564,16 @@ a {
   border-color: var(--color-border);
   background-color: var(--color-dark-background);
   color: white;
+}
+
+.blog-slider__pagination {
+  position: static;
+}
+.blog-slider__pagination > .swiper-pagination-bullet {
+  transition: width 0.3s;
+  border-radius: 100rem;
+}
+.blog-slider__pagination > .swiper-pagination-bullet-active {
+  width: 3rem;
+  background: var(--color-border);
 }
