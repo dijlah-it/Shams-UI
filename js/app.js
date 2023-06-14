@@ -34,3 +34,24 @@ const heroSlider = new Swiper(".hero-slider", {
     swiper: heroThumbSlider,
   },
 });
+
+const blogSlider = new Swiper(".blog-slider", {
+  effect: "coverflow",
+  slidesPerView: 1,
+  spaceBetween: 0,
+  centeredSlides: true,
+  loop: true,
+  loopedSlides: 2,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: -30,
+    modifier: 1,
+    slideShadows: false,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: "auto",
+      spaceBetween: 10,
+    },
+  },
+});
