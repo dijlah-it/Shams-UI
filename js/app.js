@@ -58,3 +58,24 @@ const blogSlider = new Swiper(".blog-slider", {
     el: ".blog-slider__pagination",
   },
 });
+
+const appContentSlider = new Swiper(".app-content-slider", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  effect: "fade",
+  loop: true,
+  allowTouchMove: false,
+});
+
+const appImgSlider = new Swiper(".app-img-slider", {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  loop: true,
+  allowTouchMove: false,
+  autoplay: {
+    delay: 5000,
+  },
+  controller: {
+    control: appContentSlider,
+  },
+});

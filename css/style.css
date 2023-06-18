@@ -684,3 +684,41 @@ a {
     display: none;
   }
 }
+
+/* * app slider */
+
+.app-sliders {
+  width: var(--def-width);
+  max-width: var(--max-width);
+  align-self: center;
+  margin-top: 2rem;
+  display: flex;
+}
+
+.app-sliders__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--color-dark-background);
+  border: 0.2rem solid var(--color-border);
+  border-radius: 2rem;
+  padding: 3rem;
+  flex: 2 0 0;
+  padding-left: 14rem;
+  max-width: 50%;
+}
+
+.app-content-slider {
+  width: 100%;
+}
+
+.app-content-card {
+  color: white;
+  background-color: var(--color-dark-background);
+}
+
+.app-img-slider {
+  flex: 3 0 0;
+  max-width: 60%;
+  margin-right: -10%;
+}
