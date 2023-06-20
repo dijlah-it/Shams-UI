@@ -71,11 +71,13 @@ const appImgSlider = new Swiper(".app-img-slider", {
   slidesPerView: 3,
   spaceBetween: 20,
   loop: true,
-  allowTouchMove: false,
   autoplay: {
-    delay: 5000,
+    delay: 4000,
   },
-  controller: {
-    control: appContentSlider,
+  // controller: {
+  //   control: appContentSlider,
+  // },
+  thumbs: {
+    swiper: appContentSlider,
   },
 });
