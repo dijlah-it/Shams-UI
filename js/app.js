@@ -62,21 +62,23 @@ const blogSlider = new Swiper(".blog-slider", {
 const appContentSlider = new Swiper(".app-content-slider", {
   slidesPerView: 1,
   spaceBetween: 20,
-  effect: "fade",
+  // effect: "fade",
   loop: true,
   allowTouchMove: false,
 });
 
 const appImgSlider = new Swiper(".app-img-slider", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 20,
   loop: true,
   autoplay: {
     delay: 4000,
   },
-  // controller: {
-  //   control: appContentSlider,
-  // },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+    },
+  },
   thumbs: {
     swiper: appContentSlider,
   },

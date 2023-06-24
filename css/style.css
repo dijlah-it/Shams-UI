@@ -66,6 +66,7 @@ a {
 .about__logo {
   width: 20rem;
   aspect-ratio: 1;
+  object-fit: cover;
 }
 
 .about__sub {
@@ -700,6 +701,7 @@ a {
 .app-sliders__content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 2rem;
   background-color: var(--color-dark-background);
   border: 0.2rem solid var(--color-border);
@@ -723,4 +725,77 @@ a {
   flex: 3 0 0;
   max-width: 60%;
   margin-right: -10%;
+}
+
+.app-content-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: white;
+}
+
+.app-content-card__sub {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.app-content-card__sub > svg {
+  width: 1.5rem;
+  fill: var(--color-border);
+}
+
+.app-content-card__title {
+  font-size: 4rem;
+}
+
+.app-content-card__text {
+  opacity: 0.5;
+}
+
+.app-content-card__boxes {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.app-content-card__boxes .icon-box__icon {
+  background-color: #fcebca;
+}
+
+@media screen and (max-width: 768px) {
+  .app-sliders {
+    position: relative;
+    align-items: center;
+  }
+  .app-sliders__content {
+    padding: 2rem;
+    padding-left: 9rem;
+    flex: none;
+    max-width: none;
+    width: 75%;
+  }
+
+  .app-content-card__sub,
+  .app-content-card__text {
+    font-size: 1.4rem;
+  }
+
+  .app-content-card__title {
+    font-size: 2rem;
+  }
+
+  .app-content-card__boxes {
+    display: none;
+  }
+
+  .app-img-slider {
+    flex: none;
+    max-width: none;
+    margin: 0;
+    max-width: 100%;
+    position: absolute;
+    width: 50%;
+    left: 0;
+  }
 }
