@@ -727,6 +727,11 @@ a {
   margin-right: -10%;
 }
 
+.app-img-slider img {
+  height: 100%;
+  object-fit: cover;
+}
+
 .app-content-card {
   display: flex;
   flex-direction: column;
@@ -795,7 +800,7 @@ a {
     margin: 0;
     max-width: 100%;
     position: absolute;
-    width: 50%;
-    left: 0;
+    inset: 0 auto 0 0;
+    width: 49%;
   }
 }
