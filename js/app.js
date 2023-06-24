@@ -1,8 +1,10 @@
 // * toggle menu
 const toggleMenu = document.querySelector(".toggle-menu");
+const menu = document.querySelector(".menu");
 
 toggleMenu.addEventListener("click", () => {
   toggleMenu.classList.toggle("opened");
+  menu.classList.toggle("opened");
   toggleMenu.setAttribute("aria-expanded", toggleMenu.contains("opened"));
 });
 

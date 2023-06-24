@@ -222,6 +222,7 @@ a {
   padding-block: 2rem;
   z-index: 100000;
   transition: background-color 0.3s, padding-block 0.3s, box-shadow 0.3s;
+  isolation: isolate;
 }
 
 #header.scrolling {
@@ -236,6 +237,10 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.toggle-menu {
+  z-index: 10;
 }
 
 .toggle-menu,
@@ -267,7 +272,7 @@ a {
   fill: white;
 }
 
-/* * menu */
+/* * toggle menu */
 
 .line {
   fill: none;
@@ -308,7 +313,33 @@ a {
   stroke-dashoffset: -134;
   stroke-width: 6;
 }
-/* * */
+/* * menu */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  position: fixed;
+  inset: 0 0 0 auto;
+  background-color: white;
+  width: 25%;
+  z-index: 1;
+  translate: 100%;
+  transition: translate 0.3s;
+}
+
+.menu.opened {
+  translate: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    width: 80%;
+  }
+}
 
 #site-logo {
   display: flex;
