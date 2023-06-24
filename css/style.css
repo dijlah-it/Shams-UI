@@ -29,6 +29,11 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+body.menu-opened {
+  overflow: hidden;
+}
+
 img,
 video {
   max-width: 100%;
