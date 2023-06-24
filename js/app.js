@@ -1,3 +1,11 @@
+// * toggle menu
+const toggleMenu = document.querySelector(".toggle-menu");
+
+toggleMenu.addEventListener("click", () => {
+  toggleMenu.classList.toggle("opened");
+  toggleMenu.setAttribute("aria-expanded", toggleMenu.contains("opened"));
+});
+
 // * header
 const header = document.getElementById("header");
 const checkScroll = () => {
