@@ -6,8 +6,11 @@ toggleMenu.addEventListener("click", () => {
   toggleMenu.classList.toggle("opened");
   menu.classList.toggle("opened");
   document.body.classList.toggle("menu-opened");
-  toggleMenu.setAttribute("aria-expanded", toggleMenu.contains("opened"));
 });
+
+// window.addEventListener("click", (event) => {
+//   console.log(event.target === menu);
+// });
 
 // * header
 const header = document.getElementById("header");
@@ -94,3 +97,18 @@ const appImgSlider = new Swiper(".app-img-slider", {
     swiper: appContentSlider,
   },
 });
+
+window.addEventListener("resize", scrollGrid);
+// window.addEventListener("scroll", scrollGrid);
+
+document.querySelector(".home-gifts").addEventListener("scroll", scrollGrid);
+
+function scrollGrid() {
+  let bodyHeight = document.body.offsetHeight,
+    mainHeight = document.querySelector(".home-gifts").offsetHeight,
+    cards = document.querySelector(".home-gifts__cards"),
+    transY = (window.pageYOffset / (mainHeight - bodyHeight)) * -100;
+
+  cards.style.setProperty("--scroll", transY + "%");
+}
+scrollGrid();
