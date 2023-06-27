@@ -35,9 +35,11 @@ body.menu-opened {
 }
 
 img,
-video {
+video,
+svg {
   max-width: 100%;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -173,6 +175,11 @@ a {
   font-size: 1.2rem;
   border: 0.1rem solid var(--color-border);
   padding: 0.2rem 1rem 0.2rem 0.2rem;
+  transition: background-color 0.3s;
+}
+
+.post-card__btn:hover {
+  background-color: #654f2a;
 }
 
 .post-card__btn-icon {
@@ -205,12 +212,22 @@ a {
   justify-content: center;
   align-items: center;
   border: 0.2rem solid var(--color-border);
+  transition: background-color 0.3s;
+}
+
+.icon-box__icon:hover {
+  background-color: var(--color-border);
 }
 
 .icon-box__icon > svg {
   width: 40%;
   fill: var(--color-border);
   height: auto;
+  transition: fill 0.3s;
+}
+
+.icon-box__icon:hover > svg {
+  fill: var(--color-dark-background);
 }
 
 .icon-box__text {
@@ -278,6 +295,10 @@ a {
 }
 
 /* * toggle menu */
+
+.toggle-menu > svg {
+  width: 100%;
+}
 
 .line {
   fill: none;
@@ -463,6 +484,11 @@ a {
   background-color: var(--color-btn-background);
   padding: 0.5rem;
   border-radius: 100rem;
+  transition: scale 0.3s;
+}
+
+.contact-item:hover {
+  scale: 1.04;
 }
 
 .contact-item:last-child {
@@ -578,6 +604,11 @@ a {
   overflow: hidden;
   border: 0.2rem solid var(--color-border);
   border-radius: 1rem;
+  transition: border-color 0.3s;
+}
+
+.hero-thumb-card:hover {
+  border-color: white;
 }
 
 .hero-thumb-slider .swiper-slide {
