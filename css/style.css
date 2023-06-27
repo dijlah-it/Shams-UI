@@ -508,6 +508,7 @@ a {
 
 .contact-item__icon > svg {
   fill: var(--color-border);
+  width: 100%;
 }
 
 .contact-item__text {
