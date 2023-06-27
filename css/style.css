@@ -914,8 +914,8 @@ a {
 /* * home gifts */
 .home-gifts {
   overflow-x: hidden;
-  --cardW: 14em;
-  --cardH: 8em;
+  --cardW: 25rem;
+  --cardH: 15rem;
   --cardZInc: 2em;
   position: relative;
   height: 50rem;
@@ -931,7 +931,7 @@ a {
   grid-template: repeat(36, var(--cardH)) / var(--cardW);
   grid-gap: 1.5em;
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%) rotateX(45deg) rotateZ(45deg)
     translateY(var(--scroll));
