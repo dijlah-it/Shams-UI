@@ -105,17 +105,15 @@ document.querySelector(".home-gifts").addEventListener("scroll", scrollGrid);
 
 function scrollGrid() {
   let homeGiftsHeight = document.querySelector(".home-gifts").offsetHeight,
-    giftCardsHeight = document.querySelector(".home-gifts__cards").offsetHeight,
+    giftCardsHolderHeight = document.querySelector(
+      ".home-gifts__holder"
+    ).offsetHeight,
     cards = document.querySelector(".home-gifts__cards"),
     transY =
       (document.querySelector(".home-gifts").scrollTop /
-        (giftCardsHeight - homeGiftsHeight)) *
+        (giftCardsHolderHeight - homeGiftsHeight)) *
       -100;
 
-  console.log(homeGiftsHeight, "home-gifts");
-  console.log(giftCardsHeight, "home-gifts__cards");
-  console.log(document.querySelector(".home-gifts").scrollTop, "window offset");
-
-  cards.style.setProperty("--scroll", transY + "%");
+  cards.style.setProperty("--scroll", 0 + "%");
 }
 scrollGrid();
