@@ -933,12 +933,13 @@ a {
   }
 
   .app-img-slider {
+    align-items: center;
     flex: none;
     max-width: none;
     margin: 0;
     max-width: 100%;
     position: absolute;
-    inset: 0 auto 0 0;
+    left: 0;
     width: 49%;
   }
 }
