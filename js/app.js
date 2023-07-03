@@ -1,16 +1,15 @@
 // * toggle menu
 const toggleMenu = document.querySelector(".toggle-menu");
-const menu = document.querySelector(".menu");
-
+const menuOverlay = document.querySelector(".menu-overlay");
 toggleMenu.addEventListener("click", () => {
-  toggleMenu.classList.toggle("opened");
-  menu.classList.toggle("opened");
   document.body.classList.toggle("menu-opened");
 });
 
-// window.addEventListener("click", (event) => {
-//   console.log(event.target === menu);
-// });
+window.addEventListener("click", (event) => {
+  if (event.target === menuOverlay) {
+    document.body.classList.remove("menu-opened");
+  }
+});
 
 // * header
 const header = document.getElementById("header");
@@ -97,23 +96,3 @@ const appImgSlider = new Swiper(".app-img-slider", {
     swiper: appContentSlider,
   },
 });
-
-window.addEventListener("resize", scrollGrid);
-// window.addEventListener("scroll", scrollGrid);
-
-document.querySelector(".home-gifts").addEventListener("scroll", scrollGrid);
-
-function scrollGrid() {
-  let homeGiftsHeight = document.querySelector(".home-gifts").offsetHeight,
-    giftCardsHolderHeight = document.querySelector(
-      ".home-gifts__holder"
-    ).offsetHeight,
-    cards = document.querySelector(".home-gifts__cards"),
-    transY =
-      (document.querySelector(".home-gifts").scrollTop /
-        (giftCardsHolderHeight - homeGiftsHeight)) *
-      -100;
-
-  cards.style.setProperty("--scroll", 0 + "%");
-}
-scrollGrid();
