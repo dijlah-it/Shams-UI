@@ -1,3 +1,14 @@
+// * splash
+const splash = document.querySelector(".splash");
+const splashBtn = document.querySelector(".splash__btn");
+
+splashBtn.addEventListener("click", () => {
+  splash.classList.add("closed");
+  if (document.body.classList.contains("first-time")) {
+    document.body.classList.remove("first-time");
+  }
+});
+
 // * toggle menu
 const toggleMenu = document.querySelector(".toggle-menu");
 const menuOverlay = document.querySelector(".menu-overlay");
