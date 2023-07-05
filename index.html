@@ -18,6 +18,7 @@
     <!-- end swiper -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <title>Alshams co | الشمس</title>
     <meta name="description" content="شركة الشمس لانظمة البطاقات الالكترونية" />
   </head>
@@ -277,7 +278,16 @@
           <a href="#" class="btn about__btn">المزيد</a>
         </div>
         <div class="home-about__col">
-          <img src="img/logo-cn.png" alt="shams" class="home-about__logo" />
+          <!-- <img src="img/logo-cn.png" alt="shams" class="home-about__logo" /> -->
+
+          <lottie-player
+            src="js/logomotion.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+            class="home-about__logo"
+          ></lottie-player>
         </div>
         <div class="home-about__col">
           <div class="contact-item">
@@ -775,7 +785,6 @@
       <div class="footer-container">
         <div class="footer-right about">
           <img src="img/logo-cn.png" alt="" class="about__logo" />
-
           <p class="about__text">
             شركة متخصصة في مجال أنظمة بيع وتوزيع البطاقات الرقمية والخدمات
             الالكترونية، تتميز بطاقم اداري متخصص وذو خبرة واسعة في هذا المجال
