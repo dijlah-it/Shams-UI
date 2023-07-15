@@ -1,3 +1,26 @@
+window.addEventListener("load", () => {
+  const os = navigator.userAgent;
+  const appDownload = document.querySelector(".app-download");
+
+  if (os.includes("Android") || os.includes("iPhone")) {
+    appDownload.classList.add("show");
+
+    if (os.includes("Android")) {
+      appDownload.classList.add("android");
+      appDownload.querySelector(".app-download__btn").href = "#android";
+    } else {
+      appDownload.classList.add("ios");
+      appDownload.querySelector(".app-download__btn").href = "#ios";
+    }
+  }
+
+  appDownload
+    .querySelector(".app-download__close")
+    .addEventListener("click", () => {
+      appDownload.classList.remove("show");
+    });
+});
+
 // * splash
 const splash = document.querySelector(".splash");
 const splashBtn = document.querySelector(".splash__btn");

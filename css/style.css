@@ -794,6 +794,65 @@ a {
   color: var(--color-border);
 }
 
+.app-download {
+  display: none;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  background-color: var(--color-dark-background);
+  color: white;
+  z-index: 10;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 -5px 10px -5px rgb(49 30 1 / 70%);
+}
+
+.app-download.show {
+  display: flex;
+}
+
+.app-download__close {
+  width: 1.5rem;
+  display: flex;
+}
+
+.app-download__close > svg {
+  width: 100%;
+  fill: white;
+}
+
+.app-download__btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 2rem;
+  border: 0.1rem solid var(--color-border);
+  border-radius: 100rem;
+  transition: background-color 0.3s;
+  margin-inline-start: auto;
+}
+
+.app-download__btn:hover {
+  background-color: var(--color-border);
+}
+
+.app-download__icon {
+  display: none;
+  fill: white;
+  width: 1.5rem;
+}
+
+.app-download.ios .ios-icon {
+  display: block;
+}
+.app-download.android .android-icon {
+  display: block;
+}
+
 /* * home */
 
 /* * home hero */
